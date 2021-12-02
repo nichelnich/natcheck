@@ -67,6 +67,9 @@ static int init()
 {
     pj_status_t status;
 
+    pj_log_set_decor(PJ_LOG_HAS_TIME | PJ_LOG_HAS_NEWLINE);
+    pj_log_set_level(5);
+
     CHECK( pj_init() );
     CHECK( pjlib_util_init() );
     CHECK( pjnath_init() );
